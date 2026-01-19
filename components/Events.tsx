@@ -72,7 +72,7 @@ export function Events({ events }: EventsProps) {
 
                 {events.length === 0 && (
                     <div className="text-center py-4 text-gray-500 text-[10px]">
-                        Nenhum evento registrado...
+                        No events recorded yet...
                     </div>
                 )}
             </div>

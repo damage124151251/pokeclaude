@@ -1,6 +1,6 @@
 import { GameStatus, Pokemon, Badge, Battle, AIAction, GameEvent } from './supabase';
 
-// Mock Game Status - Claude está jogando!
+// Mock Game Status - Claude is playing!
 export const mockGameStatus: GameStatus = {
     id: 'main',
     is_running: true,
@@ -15,9 +15,9 @@ export const mockGameStatus: GameStatus = {
     play_time_seconds: 7834, // ~2h10m
     total_battles: 47,
     total_catches: 12,
-    current_objective: 'Atravessar Viridian Forest para chegar em Pewter City',
+    current_objective: 'Cross Viridian Forest to reach Pewter City',
     ai_mood: 'FOCUSED',
-    last_action: 'Derrotou Bug Catcher com Pikachu',
+    last_action: 'Defeated Bug Catcher with Pikachu',
     last_screenshot_url: '/game-screen.png',
     updated_at: new Date().toISOString(),
 };
@@ -176,7 +176,7 @@ export const mockBattles: Battle[] = [
         money_gained: 96,
         location: 'Viridian Forest',
         turns: 4,
-        ai_strategy: 'Thunder Shock spam - super efetivo contra Flying/Bug',
+        ai_strategy: 'Thunder Shock spam - super effective against Flying/Bug types',
         created_at: new Date(Date.now() - 120000).toISOString(),
     },
     {
@@ -191,7 +191,7 @@ export const mockBattles: Battle[] = [
         money_gained: 0,
         location: 'Viridian Forest',
         turns: 6,
-        ai_strategy: 'Enfraquecer com Vine Whip, paralyze com status, capturar com Poke Ball',
+        ai_strategy: 'Weaken with Vine Whip, paralyze with status, catch with Poke Ball',
         created_at: new Date(Date.now() - 600000).toISOString(),
     },
     {
@@ -206,7 +206,7 @@ export const mockBattles: Battle[] = [
         money_gained: 1386,
         location: 'Pewter City Gym',
         turns: 12,
-        ai_strategy: 'Bulbasaur com Vine Whip 4x efetivo. Leech Seed para sustain. Vitoria facil.',
+        ai_strategy: 'Bulbasaur with Vine Whip 4x effective. Leech Seed for sustain. Easy win.',
         created_at: new Date(Date.now() - 3600000).toISOString(),
     },
     {
@@ -221,7 +221,7 @@ export const mockBattles: Battle[] = [
         money_gained: 0,
         location: 'Route 2',
         turns: 3,
-        ai_strategy: 'Gust spam para treinar Pidgey',
+        ai_strategy: 'Gust spam to train Pidgey',
         created_at: new Date(Date.now() - 5400000).toISOString(),
     },
 ];
@@ -231,8 +231,8 @@ export const mockActions: AIAction[] = [
     {
         id: '1',
         action_type: 'battle',
-        action_detail: 'Usou Thunder Shock em Weedle',
-        reasoning: 'Weedle e tipo Bug/Poison. Electric e neutro mas Thunder Shock tem STAB com Pikachu. One-shot garantido pelo nivel.',
+        action_detail: 'Used Thunder Shock on Weedle',
+        reasoning: 'Weedle is Bug/Poison type. Electric is neutral but Thunder Shock has STAB with Pikachu. One-shot guaranteed by level.',
         screenshot_before: null,
         screenshot_after: null,
         success: true,
@@ -241,8 +241,8 @@ export const mockActions: AIAction[] = [
     {
         id: '2',
         action_type: 'explore',
-        action_detail: 'Moveu para CIMA',
-        reasoning: 'Objetivo: sair da Viridian Forest. Caminho norte leva a saida. Evitando grass para nao encontrar wilds desnecessarios.',
+        action_detail: 'Moved UP',
+        reasoning: 'Objective: exit Viridian Forest. North path leads to exit. Avoiding grass to prevent unnecessary wild encounters.',
         screenshot_before: null,
         screenshot_after: null,
         success: true,
@@ -251,8 +251,8 @@ export const mockActions: AIAction[] = [
     {
         id: '3',
         action_type: 'battle',
-        action_detail: 'Iniciou batalha com Bug Catcher',
-        reasoning: 'Trainer no caminho, batalha inevitavel. Pikachu na frente para exp. Trainer tem apenas bugs - facil.',
+        action_detail: 'Started battle with Bug Catcher',
+        reasoning: 'Trainer in the way, battle unavoidable. Pikachu in front for exp. Trainer only has bugs - easy.',
         screenshot_before: null,
         screenshot_after: null,
         success: true,
@@ -261,8 +261,8 @@ export const mockActions: AIAction[] = [
     {
         id: '4',
         action_type: 'menu',
-        action_detail: 'Trocou Pikachu para slot 1',
-        reasoning: 'Pikachu tem Speed alto e Thunder Shock. Ideal para limpar Viridian Forest rapidamente.',
+        action_detail: 'Moved Pikachu to slot 1',
+        reasoning: 'Pikachu has high Speed and Thunder Shock. Ideal for clearing Viridian Forest quickly.',
         screenshot_before: null,
         screenshot_after: null,
         success: true,
@@ -271,8 +271,8 @@ export const mockActions: AIAction[] = [
     {
         id: '5',
         action_type: 'heal',
-        action_detail: 'Usou Potion em Bulbasaur',
-        reasoning: 'Bulbasaur com 12/44 HP. Preciso dele saudavel para gym battles. Potion restaura 20 HP.',
+        action_detail: 'Used Potion on Bulbasaur',
+        reasoning: 'Bulbasaur at 12/44 HP. Need him healthy for gym battles. Potion restores 20 HP.',
         screenshot_before: null,
         screenshot_after: null,
         success: true,
@@ -285,8 +285,8 @@ export const mockEvents: GameEvent[] = [
     {
         id: '1',
         event_type: 'badge',
-        title: 'Boulder Badge Conquistada!',
-        description: 'Derrotei Brock apos 2 tentativas. Bulbasaur foi o MVP com Vine Whip.',
+        title: 'Boulder Badge Obtained!',
+        description: 'Defeated Brock after 2 attempts. Bulbasaur was the MVP with Vine Whip.',
         pokemon_involved: 'Bulbasaur',
         location: 'Pewter City Gym',
         screenshot_url: null,
@@ -295,8 +295,8 @@ export const mockEvents: GameEvent[] = [
     {
         id: '2',
         event_type: 'catch',
-        title: 'Pikachu Capturado!',
-        description: 'Encontrei um Pikachu raro na Viridian Forest! Taxa de encontro de apenas 5%.',
+        title: 'Pikachu Caught!',
+        description: 'Found a rare Pikachu in Viridian Forest! Only 5% encounter rate.',
         pokemon_involved: 'Pikachu',
         location: 'Viridian Forest',
         screenshot_url: null,
@@ -305,8 +305,8 @@ export const mockEvents: GameEvent[] = [
     {
         id: '3',
         event_type: 'milestone',
-        title: 'Jornada Iniciada',
-        description: 'Recebi meu primeiro Pokemon do Professor Oak. Escolhi Bulbasaur pela vantagem contra os dois primeiros gyms.',
+        title: 'Journey Started',
+        description: 'Received my first Pokemon from Professor Oak. Chose Bulbasaur for the advantage against the first two gyms.',
         pokemon_involved: 'Bulbasaur',
         location: 'Pallet Town',
         screenshot_url: null,
@@ -316,20 +316,20 @@ export const mockEvents: GameEvent[] = [
 
 // Simulated action messages for terminal
 export const terminalMessages = [
-    { type: 'system', message: 'Claude AI conectado ao emulador mGBA' },
-    { type: 'system', message: 'ROM carregada: Pokemon Fire Red (USA)' },
-    { type: 'ai', message: 'Analisando tela... Estou na Viridian Forest' },
-    { type: 'ai', message: 'Objetivo atual: Chegar em Pewter City' },
-    { type: 'move', message: 'Movendo CIMA - caminho livre detectado' },
-    { type: 'battle', message: '! Encontro com trainer Bug Catcher' },
-    { type: 'ai', message: 'Avaliando time inimigo: Weedle Lv8, Caterpie Lv8' },
-    { type: 'ai', message: 'Estrategia: Pikachu com Thunder Shock' },
-    { type: 'battle', message: 'PIKACHU usou THUNDER SHOCK!' },
-    { type: 'battle', message: 'E super efetivo!' },
-    { type: 'battle', message: 'Weedle inimigo desmaiou!' },
-    { type: 'ai', message: 'Proximo: Caterpie. Mantendo estrategia.' },
-    { type: 'battle', message: 'PIKACHU usou THUNDER SHOCK!' },
-    { type: 'battle', message: 'Caterpie inimigo desmaiou!' },
-    { type: 'success', message: 'Vitoria! +156 EXP, +$96' },
-    { type: 'ai', message: 'Batalha concluida. Continuando exploracao...' },
+    { type: 'system', message: 'Claude AI connected to mGBA emulator' },
+    { type: 'system', message: 'ROM loaded: Pokemon Fire Red (USA)' },
+    { type: 'ai', message: 'Analyzing screen... I am in Viridian Forest' },
+    { type: 'ai', message: 'Current objective: Reach Pewter City' },
+    { type: 'move', message: 'Moving UP - clear path detected' },
+    { type: 'battle', message: '! Encountered trainer Bug Catcher' },
+    { type: 'ai', message: 'Evaluating enemy team: Weedle Lv8, Caterpie Lv8' },
+    { type: 'ai', message: 'Strategy: Pikachu with Thunder Shock' },
+    { type: 'battle', message: 'PIKACHU used THUNDER SHOCK!' },
+    { type: 'battle', message: 'It\'s super effective!' },
+    { type: 'battle', message: 'Enemy Weedle fainted!' },
+    { type: 'ai', message: 'Next: Caterpie. Maintaining strategy.' },
+    { type: 'battle', message: 'PIKACHU used THUNDER SHOCK!' },
+    { type: 'battle', message: 'Enemy Caterpie fainted!' },
+    { type: 'success', message: 'Victory! +156 EXP, +$96' },
+    { type: 'ai', message: 'Battle complete. Continuing exploration...' },
 ];

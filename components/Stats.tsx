@@ -23,43 +23,43 @@ export function Stats({ status }: StatsProps) {
                         <span className="text-gray-500 text-[10px]"> / 151</span>
                     </div>
                     <div className="text-[8px] text-gray-500">
-                        {status.pokedex_seen} vistos
+                        {status.pokedex_seen} seen
                     </div>
                 </div>
 
                 {/* Battles */}
                 <div className="bg-gradient-to-br from-yellow-600/20 to-yellow-900/20 rounded-lg p-3 border border-yellow-500/30">
                     <div className="text-2xl mb-1">⚔️</div>
-                    <div className="text-[8px] text-gray-400 uppercase">Batalhas</div>
+                    <div className="text-[8px] text-gray-400 uppercase">Battles</div>
                     <div className="text-[14px] font-bold text-white">
                         {status.total_battles}
                     </div>
                     <div className="text-[8px] text-gray-500">
-                        total realizadas
+                        total fought
                     </div>
                 </div>
 
                 {/* Catches */}
                 <div className="bg-gradient-to-br from-purple-600/20 to-purple-900/20 rounded-lg p-3 border border-purple-500/30">
                     <div className="text-2xl mb-1">🎯</div>
-                    <div className="text-[8px] text-gray-400 uppercase">Capturas</div>
+                    <div className="text-[8px] text-gray-400 uppercase">Catches</div>
                     <div className="text-[14px] font-bold text-white">
                         {status.total_catches}
                     </div>
                     <div className="text-[8px] text-gray-500">
-                        pokémon capturados
+                        pokemon caught
                     </div>
                 </div>
 
                 {/* Money */}
                 <div className="bg-gradient-to-br from-green-600/20 to-green-900/20 rounded-lg p-3 border border-green-500/30">
                     <div className="text-2xl mb-1">💰</div>
-                    <div className="text-[8px] text-gray-400 uppercase">Dinheiro</div>
+                    <div className="text-[8px] text-gray-400 uppercase">Money</div>
                     <div className="text-[14px] font-bold text-white">
                         ${status.money.toLocaleString()}
                     </div>
                     <div className="text-[8px] text-gray-500">
-                        pokédollars
+                        pokedollars
                     </div>
                 </div>
             </div>

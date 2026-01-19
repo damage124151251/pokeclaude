@@ -9,9 +9,9 @@ interface GameScreenProps {
 
 // Simulated game frames for demo
 const gameFrames = [
-    { scene: 'forest', description: 'Explorando Viridian Forest...' },
-    { scene: 'battle', description: 'Batalha contra Bug Catcher!' },
-    { scene: 'walking', description: 'Caminhando pela rota...' },
+    { scene: 'forest', description: 'Exploring Viridian Forest...' },
+    { scene: 'battle', description: 'Battle against Bug Catcher!' },
+    { scene: 'walking', description: 'Walking through the route...' },
 ];
 
 export function GameScreen({ status }: GameScreenProps) {
@@ -34,7 +34,7 @@ export function GameScreen({ status }: GameScreenProps) {
                     <span>mGBA Emulator</span>
                     <span className="flex items-center gap-2">
                         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        Conectado
+                        Connected
                     </span>
                 </div>
 
@@ -90,7 +90,7 @@ export function GameScreen({ status }: GameScreenProps) {
                     {showOverlay && (
                         <div className="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-[8px] text-cyan-400 flex items-center gap-1">
                             <span className="animate-spin">🤖</span>
-                            <span>AI Analisando...</span>
+                            <span>AI Analyzing...</span>
                         </div>
                     )}
 
@@ -151,7 +151,7 @@ export function GameScreen({ status }: GameScreenProps) {
                     </span>
                 </div>
                 <div className="text-[10px] text-gray-300">
-                    <span className="text-yellow-400">Objetivo:</span> {status.current_objective}
+                    <span className="text-yellow-400">Objective:</span> {status.current_objective}
                 </div>
             </div>
         </div>

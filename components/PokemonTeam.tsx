@@ -153,7 +153,7 @@ export function PokemonTeam({ team }: PokemonTeamProps) {
                         key={`empty-${i}`}
                         className="bg-gray-700/20 rounded-lg p-4 border-2 border-dashed border-gray-600 flex items-center justify-center"
                     >
-                        <span className="text-gray-600 text-[10px]">Slot {team.length + i + 1} - Vazio</span>
+                        <span className="text-gray-600 text-[10px]">Slot {team.length + i + 1} - Empty</span>
                     </div>
                 ))}
             </div>

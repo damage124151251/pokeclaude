@@ -132,7 +132,7 @@ export default function Home() {
                 {useMock && (
                     <div className="mb-4 bg-yellow-500/20 border border-yellow-500/50 rounded-lg p-3 text-center">
                         <span className="text-[10px] text-yellow-400">
-                            🎮 DEMO MODE - Usando dados simulados. Conecte ao Supabase para dados reais.
+                            🎮 DEMO MODE - Using simulated data. Connect to Supabase for real data.
                         </span>
                     </div>
                 )}

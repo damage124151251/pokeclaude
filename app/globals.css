@@ -15,10 +15,18 @@
   image-rendering: pixelated;
 }
 
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Press Start 2P', monospace;
   background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Retro Border Style */

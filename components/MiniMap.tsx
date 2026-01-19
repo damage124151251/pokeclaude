@@ -116,13 +116,13 @@ export function MiniMap({ status }: MiniMapProps) {
             <div className="mt-3 bg-gray-700/50 rounded-lg p-3">
                 <div className="flex items-center justify-between">
                     <div>
-                        <div className="text-[8px] text-gray-400 uppercase">Localização Atual</div>
+                        <div className="text-[8px] text-gray-400 uppercase">Current Location</div>
                         <div className="text-[12px] font-bold text-yellow-400">
                             📍 {status.current_location}
                         </div>
                     </div>
                     <div className="text-right">
-                        <div className="text-[8px] text-gray-400">Coordenadas</div>
+                        <div className="text-[8px] text-gray-400">Coordinates</div>
                         <div className="text-[10px] text-gray-300 font-mono">
                             X:{status.player_x} Y:{status.player_y}
                         </div>

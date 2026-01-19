@@ -121,7 +121,7 @@ export function Terminal({ actions }: TerminalProps) {
                 {/* Typing indicator */}
                 <div className="text-[10px] text-cyan-400 flex items-center gap-1">
                     <span>🤖</span>
-                    <span className="cursor-blink">Analisando próximo movimento</span>
+                    <span className="cursor-blink">Analyzing next move</span>
                 </div>
 
                 <div ref={endRef} />

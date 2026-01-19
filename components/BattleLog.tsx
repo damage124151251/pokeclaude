@@ -21,9 +21,9 @@ const resultColors: Record<string, string> = {
 };
 
 const battleTypeLabels: Record<string, string> = {
-    wild: 'Selvagem',
-    trainer: 'Treinador',
-    gym: 'Ginásio',
+    wild: 'Wild',
+    trainer: 'Trainer',
+    gym: 'Gym',
     rival: 'Rival',
     elite4: 'Elite 4',
 };
@@ -77,7 +77,7 @@ export function BattleLog({ battles }: BattleLogProps) {
                         <div className="grid grid-cols-2 gap-2 text-[8px]">
                             {/* Enemy Pokemon */}
                             <div className="bg-black/20 rounded p-2">
-                                <div className="text-gray-400 mb-1">Oponente:</div>
+                                <div className="text-gray-400 mb-1">Opponent:</div>
                                 <div className="flex flex-wrap gap-1">
                                     {battle.opponent_pokemon.map((poke, i) => (
                                         <span key={i} className="bg-red-900/50 px-1.5 py-0.5 rounded text-red-300">
@@ -89,7 +89,7 @@ export function BattleLog({ battles }: BattleLogProps) {
 
                             {/* My Pokemon */}
                             <div className="bg-black/20 rounded p-2">
-                                <div className="text-gray-400 mb-1">Meu time:</div>
+                                <div className="text-gray-400 mb-1">My team:</div>
                                 <div className="flex flex-wrap gap-1">
                                     {battle.my_pokemon_used.map((poke, i) => (
                                         <span key={i} className="bg-blue-900/50 px-1.5 py-0.5 rounded text-blue-300">
@@ -109,7 +109,7 @@ export function BattleLog({ battles }: BattleLogProps) {
                                 <span className="text-green-400">+${battle.money_gained}</span>
                             )}
                             {battle.pokemon_caught && (
-                                <span className="text-purple-400">Capturou: {battle.pokemon_caught}</span>
+                                <span className="text-purple-400">Caught: {battle.pokemon_caught}</span>
                             )}
                         </div>
 
@@ -127,7 +127,7 @@ export function BattleLog({ battles }: BattleLogProps) {
 
                 {battles.length === 0 && (
                     <div className="text-center py-8 text-gray-500 text-[10px]">
-                        Nenhuma batalha registrada ainda...
+                        No battles recorded yet...
                     </div>
                 )}
             </div>

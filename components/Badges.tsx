@@ -73,12 +73,12 @@ export function Badges({ badges }: BadgesProps) {
                                         </div>
                                         {badge.obtained && (
                                             <div className="text-green-400 mt-1">
-                                                ✓ Conquistada ({badge.attempts} tentativas)
+                                                ✓ Obtained ({badge.attempts} attempts)
                                             </div>
                                         )}
                                         {!badge.obtained && badge.attempts > 0 && (
                                             <div className="text-yellow-400 mt-1">
-                                                ⚔️ {badge.attempts} tentativas
+                                                ⚔️ {badge.attempts} attempts
                                             </div>
                                         )}
                                     </div>
@@ -99,7 +99,7 @@ export function Badges({ badges }: BadgesProps) {
             {/* Progress Bar */}
             <div className="mt-4">
                 <div className="flex justify-between text-[8px] text-gray-400 mb-1">
-                    <span>Progresso da Liga</span>
+                    <span>League Progress</span>
                     <span>{Math.round((obtainedCount / 8) * 100)}%</span>
                 </div>
                 <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -113,7 +113,7 @@ export function Badges({ badges }: BadgesProps) {
             {/* Next Target */}
             {obtainedCount < 8 && (
                 <div className="mt-3 bg-gray-700/50 rounded-lg p-2">
-                    <div className="text-[8px] text-gray-400">PRÓXIMO OBJETIVO:</div>
+                    <div className="text-[8px] text-gray-400">NEXT OBJECTIVE:</div>
                     <div className="text-[10px] text-white">
                         {badges.find(b => !b.obtained)?.badge_name} - {badges.find(b => !b.obtained)?.gym_leader}
                     </div>

@@ -5,7 +5,8 @@ export const metadata: Metadata = {
   title: 'PokeClaude - AI Plays Pokemon',
   description: 'Watch Claude AI play Pokemon Fire Red in real-time',
   icons: {
-    icon: '/pokeball.png',
+    icon: '/favicon.png',
+    apple: '/logo.png',
   },
 }
 

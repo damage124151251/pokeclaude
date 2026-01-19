@@ -1,6 +1,7 @@
 'use client';
 
 import { GameStatus } from '@/lib/supabase';
+import Image from 'next/image';
 
 interface HeaderProps {
     status: GameStatus;
@@ -13,8 +14,14 @@ export function Header({ status }: HeaderProps) {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                            <span className="text-2xl">🔴</span>
+                        <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg">
+                            <Image
+                                src="/logo.png"
+                                alt="PokeClaude"
+                                width={48}
+                                height={48}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div>
                             <h1 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">

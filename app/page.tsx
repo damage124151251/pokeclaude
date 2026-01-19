@@ -128,15 +128,6 @@ export default function Home() {
             <Header status={status} />
 
             <main className="container mx-auto px-4 py-6">
-                {/* Demo Mode Banner */}
-                {useMock && (
-                    <div className="mb-4 bg-yellow-500/20 border border-yellow-500/50 rounded-lg p-3 text-center">
-                        <span className="text-[10px] text-yellow-400">
-                            🎮 DEMO MODE - Using simulated data. Connect to Supabase for real data.
-                        </span>
-                    </div>
-                )}
-
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     {/* Left Column - Game Screen & Terminal */}
                     <div className="lg:col-span-5 space-y-6">

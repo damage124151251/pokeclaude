@@ -9,7 +9,7 @@ interface TerminalProps {
 }
 
 export function Terminal({ actions }: TerminalProps) {
-    const endRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const [messages, setMessages] = useState<typeof terminalMessages>([]);
     const [messageIndex, setMessageIndex] = useState(0);
 
@@ -31,9 +31,11 @@ export function Terminal({ actions }: TerminalProps) {
         }
     }, [messageIndex]);
 
-    // Auto scroll
+    // Auto scroll only inside terminal container
     useEffect(() => {
-        endRef.current?.scrollIntoView({ behavior: 'smooth' });
+        if (containerRef.current) {
+            containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        }
     }, [messages]);
 
     const getColor = (type: string) => {
@@ -79,7 +81,7 @@ export function Terminal({ actions }: TerminalProps) {
             </div>
 
             {/* Terminal Content */}
-            <div className="h-64 overflow-y-auto terminal-scroll p-4 font-mono">
+            <div ref={containerRef} className="h-64 overflow-y-auto terminal-scroll p-4 font-mono">
                 {/* Initial boot sequence */}
                 <div className="text-[10px] text-gray-500 mb-4">
                     <div>PokeClaude AI Engine v1.0.0</div>
@@ -123,8 +125,6 @@ export function Terminal({ actions }: TerminalProps) {
                     <span>🤖</span>
                     <span className="cursor-blink">Analyzing next move</span>
                 </div>
-
-                <div ref={endRef} />
             </div>
 
             {/* Terminal Footer */}
